@@ -4,8 +4,12 @@ describe('shoppingBasket', () => {
 
     describe('addItem', () => {
 
+        let shoppingBasket;
+        beforeEach(() => {
+          shoppingBasket = new ShoppingBasket();
+        });
+
         it('adds a new object to an array when addItem is called with a name of Mars and a price of 4.99', () => {
-            const shoppingBasket = new ShoppingBasket();
             const mock = {
                 name: "Mars",
                 price: 4.99
